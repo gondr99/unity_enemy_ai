@@ -1,0 +1,853 @@
+fileFormatVersion: 2
+guid: 2c330d15c6c0a22458c6856d76ec4ed4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3374107216697889981
+    second: boss_sprites_deadAnim_sheet_0
+  - first:
+      213: -2570531044156751546
+    second: boss_sprites_deadAnim_sheet_1
+  - first:
+      213: -2229794028030661921
+    second: boss_sprites_deadAnim_sheet_2
+  - first:
+      213: 4364938572990139410
+    second: boss_sprites_deadAnim_sheet_3
+  - first:
+      213: -2812156958694254083
+    second: boss_sprites_deadAnim_sheet_4
+  - first:
+      213: 3425561691489436553
+    second: boss_sprites_deadAnim_sheet_5
+  - first:
+      213: 7514854684725591694
+    second: boss_sprites_deadAnim_sheet_6
+  - first:
+      213: -4047329586838802926
+    second: boss_sprites_deadAnim_sheet_7
+  - first:
+      213: 6187095182608169366
+    second: boss_sprites_deadAnim_sheet_8
+  - first:
+      213: 4619778755607209854
+    second: boss_sprites_deadAnim_sheet_9
+  - first:
+      213: 3792382990976882418
+    second: boss_sprites_deadAnim_sheet_10
+  - first:
+      213: 3852351878124295170
+    second: boss_sprites_deadAnim_sheet_11
+  - first:
+      213: -2122839637793980924
+    second: boss_sprites_deadAnim_sheet_12
+  - first:
+      213: 6978280870323072761
+    second: boss_sprites_deadAnim_sheet_13
+  - first:
+      213: 7704971326866341925
+    second: boss_sprites_deadAnim_sheet_14
+  - first:
+      213: 5307838825479493460
+    second: boss_sprites_deadAnim_sheet_15
+  - first:
+      213: -8745053080240923993
+    second: boss_sprites_deadAnim_sheet_16
+  - first:
+      213: -121657496058229317
+    second: boss_sprites_deadAnim_sheet_17
+  - first:
+      213: 1715636095915910183
+    second: boss_sprites_deadAnim_sheet_18
+  - first:
+      213: 2141117007049597833
+    second: boss_sprites_deadAnim_sheet_19
+  - first:
+      213: -7473258352615592294
+    second: boss_sprites_deadAnim_sheet_20
+  - first:
+      213: 4216408761561318142
+    second: boss_sprites_deadAnim_sheet_21
+  - first:
+      213: 5913070228363897870
+    second: boss_sprites_deadAnim_sheet_22
+  - first:
+      213: 8726727374301803689
+    second: boss_sprites_deadAnim_sheet_23
+  - first:
+      213: 8455401644183012590
+    second: boss_sprites_deadAnim_sheet_24
+  - first:
+      213: 5602548890577073506
+    second: boss_sprites_deadAnim_sheet_25
+  - first:
+      213: -975393233972148420
+    second: boss_sprites_deadAnim_sheet_26
+  - first:
+      213: -8004156295226189304
+    second: boss_sprites_deadAnim_sheet_27
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: boss_sprites_deadAnim_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 288
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db41c5503ac33de20800000000000000
+      internalID: 3374107216697889981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_sprites_deadAnim_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 384
+        width: 288
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6414ce472a3a35cd0800000000000000
+      internalID: -2570531044156751546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_sprites_deadAnim_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 384
+        width: 288
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdae1fc352e2e01e0800000000000000
+      internalID: -2229794028030661921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_sprites_deadAnim_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 384
+        width: 288
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21c4a757180639c30800000000000000
+      internalID: 4364938572990139410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_sprites_deadAnim_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 384
+        width: 288
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df9d260452639f8d0800000000000000
+      internalID: -2812156958694254083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_sprites_deadAnim_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 384
+        width: 288
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9830a61853a0a8f20800000000000000
+      internalID: 3425561691489436553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_sprites_deadAnim_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 288
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8ebfb535802a4860800000000000000
+      internalID: 7514854684725591694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_sprites_deadAnim_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 288
+        width: 288
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21e6b873f2ff4d7c0800000000000000
+      internalID: -4047329586838802926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_sprites_deadAnim_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 288
+        width: 288
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 699f3e6b94afcd550800000000000000
+      internalID: 6187095182608169366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_sprites_deadAnim_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 288
+        width: 288
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e772dd43d40cc1040800000000000000
+      internalID: 4619778755607209854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_sprites_deadAnim_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 288
+        width: 288
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f61965cc3041a430800000000000000
+      internalID: 3792382990976882418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_sprites_deadAnim_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 288
+        width: 288
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 204586d5f9d467530800000000000000
+      internalID: 3852351878124295170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_sprites_deadAnim_sheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 288
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40ebb22c8982a82e0800000000000000
+      internalID: -2122839637793980924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_sprites_deadAnim_sheet_13
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 192
+        width: 288
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fea282aa75d7d060800000000000000
+      internalID: 6978280870323072761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_sprites_deadAnim_sheet_14
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 192
+        width: 288
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 520407e599e8dea60800000000000000
+      internalID: 7704971326866341925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_sprites_deadAnim_sheet_15
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 192
+        width: 288
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4575bb52a4b39a940800000000000000
+      internalID: 5307838825479493460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_sprites_deadAnim_sheet_16
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 192
+        width: 288
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aadd4a8e8453a680800000000000000
+      internalID: -8745053080240923993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_sprites_deadAnim_sheet_17
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 192
+        width: 288
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbd8f23e629cf4ef0800000000000000
+      internalID: -121657496058229317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_sprites_deadAnim_sheet_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 288
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 724e7ec70f92fc710800000000000000
+      internalID: 1715636095915910183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_sprites_deadAnim_sheet_19
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 96
+        width: 288
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9832db3e296c6bd10800000000000000
+      internalID: 2141117007049597833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_sprites_deadAnim_sheet_20
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 96
+        width: 288
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9e60a19f17a94890800000000000000
+      internalID: -7473258352615592294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_sprites_deadAnim_sheet_21
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 96
+        width: 288
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef205bcdd61b38a30800000000000000
+      internalID: 4216408761561318142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_sprites_deadAnim_sheet_22
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 96
+        width: 288
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0c619d3b027f0250800000000000000
+      internalID: 5913070228363897870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_sprites_deadAnim_sheet_23
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 96
+        width: 288
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a4bfec8f409b1970800000000000000
+      internalID: 8726727374301803689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_sprites_deadAnim_sheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 288
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee448ca2ffe975570800000000000000
+      internalID: 8455401644183012590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_sprites_deadAnim_sheet_25
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 288
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 265fa9b488040cd40800000000000000
+      internalID: 5602548890577073506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_sprites_deadAnim_sheet_26
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 288
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3745c48505b672f0800000000000000
+      internalID: -975393233972148420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_sprites_deadAnim_sheet_27
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 0
+        width: 288
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80a1650e1468be090800000000000000
+      internalID: -8004156295226189304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      boss_sprites_deadAnim_sheet_0: 3374107216697889981
+      boss_sprites_deadAnim_sheet_1: -2570531044156751546
+      boss_sprites_deadAnim_sheet_10: 3792382990976882418
+      boss_sprites_deadAnim_sheet_11: 3852351878124295170
+      boss_sprites_deadAnim_sheet_12: -2122839637793980924
+      boss_sprites_deadAnim_sheet_13: 6978280870323072761
+      boss_sprites_deadAnim_sheet_14: 7704971326866341925
+      boss_sprites_deadAnim_sheet_15: 5307838825479493460
+      boss_sprites_deadAnim_sheet_16: -8745053080240923993
+      boss_sprites_deadAnim_sheet_17: -121657496058229317
+      boss_sprites_deadAnim_sheet_18: 1715636095915910183
+      boss_sprites_deadAnim_sheet_19: 2141117007049597833
+      boss_sprites_deadAnim_sheet_2: -2229794028030661921
+      boss_sprites_deadAnim_sheet_20: -7473258352615592294
+      boss_sprites_deadAnim_sheet_21: 4216408761561318142
+      boss_sprites_deadAnim_sheet_22: 5913070228363897870
+      boss_sprites_deadAnim_sheet_23: 8726727374301803689
+      boss_sprites_deadAnim_sheet_24: 8455401644183012590
+      boss_sprites_deadAnim_sheet_25: 5602548890577073506
+      boss_sprites_deadAnim_sheet_26: -975393233972148420
+      boss_sprites_deadAnim_sheet_27: -8004156295226189304
+      boss_sprites_deadAnim_sheet_3: 4364938572990139410
+      boss_sprites_deadAnim_sheet_4: -2812156958694254083
+      boss_sprites_deadAnim_sheet_5: 3425561691489436553
+      boss_sprites_deadAnim_sheet_6: 7514854684725591694
+      boss_sprites_deadAnim_sheet_7: -4047329586838802926
+      boss_sprites_deadAnim_sheet_8: 6187095182608169366
+      boss_sprites_deadAnim_sheet_9: 4619778755607209854
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
