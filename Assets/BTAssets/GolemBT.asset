@@ -211,7 +211,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 7806daa48b6b4a64bb04bf93d7965818
-  position: {x: 672, y: 652}
+  position: {x: 988, y: 676}
   blackboard:
     targetTrm: {fileID: 0}
     moveToPosition: {x: 0, y: 0, z: 0}
@@ -319,7 +319,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: e048ba9d9c02a8c49ac6541394c2d7b3
-  position: {x: 622, y: 499}
+  position: {x: 938, y: 523}
   blackboard:
     targetTrm: {fileID: 0}
     moveToPosition: {x: 0, y: 0, z: 0}
@@ -508,7 +508,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 1cea4988870ae5a4793778b12ac2b3d6
-  position: {x: 470, y: 667}
+  position: {x: 786, y: 691}
   blackboard:
     targetTrm: {fileID: 0}
     moveToPosition: {x: 0, y: 0, z: 0}
