@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class AgentAnimator : MonoBehaviour
+public class AgentAnimator : MonoBehaviour, IAgentComponent
 {
     protected Agent _owner;
     protected Animator _animator;
@@ -8,7 +8,7 @@ public class AgentAnimator : MonoBehaviour
     public virtual void Initialize(Agent owner)
     {
         _owner = owner;    
-        _animator = _owner.VisualTrm.GetComponent<Animator>();
+        _animator = GetComponent<Animator>();
     }
 
     public void SetBool(int hash, bool value)

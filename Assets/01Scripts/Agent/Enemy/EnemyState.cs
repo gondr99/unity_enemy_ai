@@ -7,16 +7,18 @@ public class EnemyState
 
     protected Enemy _enemy;
     protected EnemyStateMachine _stateMachine;
+    protected AgentAnimator _animatorCompo;
     public EnemyState(Enemy enemy, EnemyStateMachine stateMachine, string stateName)
     {
         _enemy = enemy;
         _stateMachine = stateMachine;
+        _animatorCompo = enemy.GetCompo<AgentAnimator>(true);
         _animatorHash = Animator.StringToHash(stateName);
     }
 
     public virtual void Enter()
     {
-        _enemy.AnimatorCompo.SetBool(_animatorHash, true);
+        _animatorCompo.SetBool(_animatorHash, true);
         _animationEndTrigger = false;
     }
 
@@ -27,7 +29,7 @@ public class EnemyState
 
     public virtual void Exit()
     {
-        _enemy.AnimatorCompo.SetBool(_animatorHash, false);
+        _animatorCompo.SetBool(_animatorHash, false);
     }
 
     public void AnimationEndTrigger()

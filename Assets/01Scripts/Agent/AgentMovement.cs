@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class AgentMovement : MonoBehaviour
+public class AgentMovement : MonoBehaviour, IAgentComponent
 {
     public Rigidbody2D RigidCompo {get; private set;}
     public Vector2 Velocity => RigidCompo.linearVelocity;

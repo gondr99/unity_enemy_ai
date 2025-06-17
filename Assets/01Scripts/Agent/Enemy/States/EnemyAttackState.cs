@@ -2,14 +2,16 @@ using UnityEngine;
 
 public class EnemyAttackState : EnemyState
 {
+    private AgentMovement _movement;
     public EnemyAttackState(Enemy enemy, EnemyStateMachine stateMachine, string stateName) : base(enemy, stateMachine, stateName)
     {
+        _movement = enemy.GetCompo<AgentMovement>();
     }
 
     public override void Enter()
     {
         base.Enter();
-        _enemy.MoveCompo.StopImmediately();
+        _movement.StopImmediately();
 
     }
 

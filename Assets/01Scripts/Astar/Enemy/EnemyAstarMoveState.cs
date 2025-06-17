@@ -12,10 +12,13 @@ public class EnemyAstarMoveState : EnemyState
     private Vector3 _nextPos;
     private Vector3 _beforeTargetPosition;
     private Vector3 _targetPosition;
+    
+    private AgentMovement _movementCompo;
 
     public EnemyAstarMoveState(Enemy enemy, EnemyStateMachine stateMachine, string stateName) : base(enemy, stateMachine, stateName)
     {
         _agent = enemy as AstarEnemy;
+        _movementCompo = enemy.GetCompo<AgentMovement>();
     }
 
     public override void Enter()
@@ -37,14 +40,14 @@ public class EnemyAstarMoveState : EnemyState
         ChaseToTarget();
         
 
-        _enemy.AnimatorCompo.SetFloat(_hashVelocity, _enemy.MoveCompo.Velocity.magnitude);        
+        _animatorCompo.SetFloat(_hashVelocity, _movementCompo.Velocity.magnitude);        
     }
 
     private void ChaseToTarget()
     {
         if(IsInPosition())
         {
-            _enemy.MoveCompo.StopImmediately();
+            _movementCompo.StopImmediately();
             if(Time.time > _enemy.lastAttackTime + _enemy.attackCooldown) {
                 _stateMachine.ChangeState(FSMState.Attack.ToString());
             }
@@ -60,7 +63,7 @@ public class EnemyAstarMoveState : EnemyState
         }
 
         Vector2 direction = _nextPos - _enemy.transform.position;
-        _enemy.MoveCompo.SetMovement(direction.normalized);
+        _movementCompo.SetMovement(direction.normalized);
     }
 
     private bool IsInPosition()

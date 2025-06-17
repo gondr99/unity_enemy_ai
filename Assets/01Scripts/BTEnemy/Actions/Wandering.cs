@@ -31,7 +31,7 @@ public class Wandering : ActionNode
             return State.SUCCESS;
         }
 
-        enemy.MoveCompo.SetMovement(direction.normalized);
+        //enemy.MoveCompo.SetMovement(direction.normalized);
         return State.RUNNING;
     }
 }

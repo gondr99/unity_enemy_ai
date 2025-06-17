@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using static Controls;
@@ -13,10 +14,15 @@ public class InputReader : ScriptableObject, IPlayerActions
         if (_controls == null)
         {
             _controls = new Controls();
+            _controls.Player.SetCallbacks(this);
         }
 
         _controls.Player.Enable();
-        _controls.Player.SetCallbacks(this);
+    }
+
+    private void OnDisable()
+    {
+        _controls.Player.Disable();
     }
 
     public void OnMovement(InputAction.CallbackContext context)

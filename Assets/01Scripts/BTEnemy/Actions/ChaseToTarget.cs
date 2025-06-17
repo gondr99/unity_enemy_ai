@@ -31,7 +31,7 @@ public class ChaseToTarget : ActionNode
         if(distance < attackRange)
             return State.SUCCESS;
         
-        enemy.MoveCompo.SetMovement(direction.normalized);
+        //enemy.MoveCompo.SetMovement(direction.normalized);
 
         return State.RUNNING;
     }

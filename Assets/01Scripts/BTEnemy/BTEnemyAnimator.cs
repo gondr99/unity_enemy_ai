@@ -9,7 +9,7 @@ public class BTEnemyAnimator : AgentAnimator
         base.Initialize(owner);
         _enemy = owner as BTEnemy;
 
-        TriggerCompo = owner.VisualTrm.GetComponent<EnemyAnimationTrigger>();
+        TriggerCompo = GetComponent<EnemyAnimationTrigger>();
         TriggerCompo.AnimationEndEvent += HandleAnimationEndEvent;
     }
 

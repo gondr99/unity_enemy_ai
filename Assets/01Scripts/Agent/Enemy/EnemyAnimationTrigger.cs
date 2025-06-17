@@ -3,10 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAnimationTrigger : MonoBehaviour
+public class EnemyAnimationTrigger : MonoBehaviour, IAgentComponent
 {
     public event Action AnimationEndEvent;
     public event Action AttackCasteEvent;
+
+    private Agent _owner;
 
     private void OnAnimationEndTrigger()
     {
@@ -16,5 +18,10 @@ public class EnemyAnimationTrigger : MonoBehaviour
     private void OnAttackCast()
     {
         AttackCasteEvent?.Invoke();
+    }
+
+    public void Initialize(Agent agent)
+    {
+        _owner = agent;
     }
 }

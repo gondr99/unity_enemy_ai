@@ -8,8 +8,10 @@ public class EnemyMoveState : EnemyState
     private Vector3 _targetPosition;
     private readonly int _hashVelocity = Animator.StringToHash("Velocity");
 
+    private AgentMovement _movementCompo;
     public EnemyMoveState(Enemy enemy, EnemyStateMachine stateMachine, string stateName) : base(enemy, stateMachine, stateName)
     {
+        _movementCompo = enemy.GetCompo<AgentMovement>();
     }
 
     public override void Update()
@@ -23,21 +25,21 @@ public class EnemyMoveState : EnemyState
         SetTargetPosition();
         ChaseToTarget();
 
-        _enemy.AnimatorCompo.SetFloat(_hashVelocity, _enemy.MoveCompo.Velocity.magnitude);
+        _animatorCompo.SetFloat(_hashVelocity, _movementCompo.Velocity.magnitude);
     }
 
     private void ChaseToTarget()
     {
         if(IsInPosition())
         {
-            _enemy.MoveCompo.StopImmediately();
+            _movementCompo.StopImmediately();
             if(Time.time > _enemy.lastAttackTime + _enemy.attackCooldown) {
                 _stateMachine.ChangeState(FSMState.Attack.ToString());
             }
             return;
         }
         Vector2 direction = _targetPosition - _enemy.transform.position;
-        _enemy.MoveCompo.SetMovement(direction.normalized);
+        _movementCompo.SetMovement(direction.normalized);
     }
 
     private bool IsInPosition()

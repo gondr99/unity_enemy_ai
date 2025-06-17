@@ -10,8 +10,7 @@ public abstract class BTEnemy : Agent
     [Header("Attack Settings")]
     public float attackCooldown = 0.5f;
     [HideInInspector] public float lastAttackTime;
-
-    public EnemyAnimationTrigger AnimTriggerCompo {get; private set;}
+    
     public BehaviourTreeRunner TreeRunner {get; private set;}
 
     public BlackBoard BlackBoard => TreeRunner.tree.blackboard;
