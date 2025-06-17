@@ -11,7 +11,7 @@ public class PlayerAnimator : AgentAnimator
 
     private void CheckMovement()
     {
-        bool isMove = _owner.MoveCompo.RigidCompo.velocity.sqrMagnitude > 0;
+        bool isMove = _owner.MoveCompo.RigidCompo.linearVelocity.sqrMagnitude > 0;
         _animator.SetBool(_hashIsMove, isMove);
     }
 
