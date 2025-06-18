@@ -1,59 +1,32 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum FSMState 
-{
-    Idle,
-    Move,
-    Attack,
-    Dead
-}
-
 public class EnemyStateMachine
 {
-    public Dictionary<string, EnemyState> stateDictionary;
-    public EnemyState currentState;
+    public EnemyState CurrentState { get; private set; }
+    private Dictionary<int, EnemyState> _stateDict;
 
     public EnemyStateMachine()
     {
-        stateDictionary = new Dictionary<string, EnemyState>();
+        _stateDict = new Dictionary<int, EnemyState>();
     }
-
-    public void Initialize(string initState)
+    
+    public void ChangeState(int newState)
     {
-        try {
-            currentState = stateDictionary[initState];
-            currentState.Enter();
-        }catch(NullReferenceException nullEx)
-        {
-            Debug.LogError($"{initState} is not defined on statemachine");
-            Debug.Log(nullEx);
-        }
-    }
+        CurrentState?.Exit();
+        Debug.Assert(_stateDict.ContainsKey(newState), $"{newState} is not defined on statemachine");
 
-    public void ChangeState(string newState)
-    {
-        try {
-            currentState.Exit();
-            currentState = stateDictionary[newState];
-            currentState.Enter();
-        }catch(NullReferenceException nullEx)
-        {
-            Debug.LogError($"{newState} is not defined on statemachine");
-            Debug.Log(nullEx);
-        }
+        CurrentState = _stateDict[newState];
+        CurrentState.Enter();
     }
 
     public void UpdateMachine()
     {
-        if(currentState == null) return;
-        
-        currentState.Update();
+        CurrentState?.Update();
     }
 
-    public void AddState(string stateName, EnemyState state)
+    public void AddState(int stateNumber, EnemyState state)
     {
-        stateDictionary.Add(stateName, state);
+        _stateDict.Add(stateNumber, state);
     }
 }

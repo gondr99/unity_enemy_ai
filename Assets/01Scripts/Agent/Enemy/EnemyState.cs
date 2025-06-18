@@ -8,11 +8,13 @@ public class EnemyState
     protected Enemy _enemy;
     protected EnemyStateMachine _stateMachine;
     protected AgentAnimator _animatorCompo;
+    protected ActionData _actionData;
     public EnemyState(Enemy enemy, EnemyStateMachine stateMachine, string stateName)
     {
         _enemy = enemy;
         _stateMachine = stateMachine;
         _animatorCompo = enemy.GetCompo<AgentAnimator>(true);
+        _actionData = enemy.GetCompo<ActionData>();
         _animatorHash = Animator.StringToHash(stateName);
     }
 

@@ -2,17 +2,16 @@ using UnityEngine;
 
 public class AgentMovement : MonoBehaviour, IAgentComponent
 {
-    public Rigidbody2D RigidCompo {get; private set;}
+    [field: SerializeField] public Rigidbody2D RigidCompo {get; private set;}
     public Vector2 Velocity => RigidCompo.linearVelocity;
     
-    [SerializeField] private float _moveSpeed = 4f;
+    [SerializeField] private float moveSpeed = 4f;
     private Agent _owner;
     private Vector2 _movementInput;
 
     public void Initialize(Agent owner)
     {
         _owner = owner;
-        RigidCompo = GetComponent<Rigidbody2D>();
     }
 
     public void StopImmediately()
@@ -28,6 +27,6 @@ public class AgentMovement : MonoBehaviour, IAgentComponent
 
     private void FixedUpdate()
     {
-        RigidCompo.linearVelocity = _movementInput * _moveSpeed;
+        RigidCompo.linearVelocity = _movementInput * moveSpeed;
     }
 }

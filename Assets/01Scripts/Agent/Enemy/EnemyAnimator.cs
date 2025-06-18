@@ -15,6 +15,6 @@ public class EnemyAnimator : AgentAnimator
 
     private void HandleAnimationEndEvent()
     {
-        _enemy.stateMachine.currentState.AnimationEndTrigger();
+        _enemy.stateMachine.CurrentState.AnimationEndTrigger();
     }
 }

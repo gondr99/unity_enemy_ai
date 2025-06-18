@@ -28,7 +28,7 @@ public class EnemyGolem : BTEnemy
         seq.InsertCallback(1f, () => _agentAnimator.SetTrigger(_dropAtkHash));
         seq.OnComplete(() =>
         {
-            BlackBoard.isAttacking = false;
+            
             _rendererCompo.SetSortingToTop(false);
         });
     }
@@ -41,7 +41,7 @@ public class EnemyGolem : BTEnemy
         seq.Append(transform.DOMove(targetPos, 0.8f).SetEase(Ease.InCubic));
         seq.OnComplete(() =>
         {
-            BlackBoard.isAttacking = false;
+            
             _rendererCompo.SetSortingToTop(false);
         });
     }

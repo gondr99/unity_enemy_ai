@@ -3,16 +3,17 @@ using UnityEngine;
 public class EnemyRenderer : AgentRenderer
 {
     private Enemy _enemy;
-
+    private ActionData _actionData;
     public override void Initialize(Agent owner)
     {
         base.Initialize(owner);
         _enemy = owner as Enemy;
+        _actionData = owner.GetCompo<ActionData>();
     }
 
     protected override void UpdateVisual()
     {
-        Transform target = _enemy.ActionData.targetTrm;
+        Transform target = _actionData.targetTrm;
         if (target == null)
         {
             base.UpdateVisual();

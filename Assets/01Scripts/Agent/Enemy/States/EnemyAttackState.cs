@@ -19,7 +19,7 @@ public class EnemyAttackState : EnemyState
     {
         base.Update();
         if(_animationEndTrigger) {
-            _stateMachine.ChangeState(FSMState.Move.ToString());
+            _stateMachine.ChangeState((int)NinjaState.Move);
         }
     }
 

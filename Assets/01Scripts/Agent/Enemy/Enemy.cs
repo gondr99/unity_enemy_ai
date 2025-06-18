@@ -12,14 +12,12 @@ public abstract class Enemy : Agent
 
 
     public EnemyStateMachine stateMachine;
-    [field:SerializeField] public ActionData ActionData {get; private set;}
-
+    
     protected override void Awake()
     {
         base.Awake();
 
         stateMachine = new EnemyStateMachine();
-        ActionData = new ActionData();
     }
 
     protected virtual void Update()

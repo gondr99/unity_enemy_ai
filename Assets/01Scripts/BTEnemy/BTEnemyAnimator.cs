@@ -15,6 +15,6 @@ public class BTEnemyAnimator : AgentAnimator
 
     private void HandleAnimationEndEvent()
     {
-        _enemy.BlackBoard.animationEnd = true;
+        
     }
 }

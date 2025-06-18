@@ -1,4 +1,3 @@
-using BTVisual;
 using UnityEngine;
 
 public abstract class BTEnemy : Agent
@@ -11,15 +10,12 @@ public abstract class BTEnemy : Agent
     public float attackCooldown = 0.5f;
     [HideInInspector] public float lastAttackTime;
     
-    public BehaviourTreeRunner TreeRunner {get; private set;}
-
-    public BlackBoard BlackBoard => TreeRunner.tree.blackboard;
-
+    
     protected override void Awake()
     {
         base.Awake();
 
-        TreeRunner = GetComponent<BehaviourTreeRunner>();
+    
         
     }
 

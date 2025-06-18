@@ -21,24 +21,16 @@ public class EnemyAstarMoveState : EnemyState
         _movementCompo = enemy.GetCompo<AgentMovement>();
     }
 
-    public override void Enter()
-    {
-        base.Enter();
-        
-    }
-
     public override void Update()
     {
         base.Update();
-        if(_enemy.ActionData.targetTrm == null) {
-            _stateMachine.ChangeState(FSMState.Idle.ToString());
+        if(_actionData.targetTrm == null) {
+            _stateMachine.ChangeState((int)NinjaState.Idle);
             return;            
         }
 
         SetTargetPosition();
-
         ChaseToTarget();
-        
 
         _animatorCompo.SetFloat(_hashVelocity, _movementCompo.Velocity.magnitude);        
     }
@@ -49,7 +41,7 @@ public class EnemyAstarMoveState : EnemyState
         {
             _movementCompo.StopImmediately();
             if(Time.time > _enemy.lastAttackTime + _enemy.attackCooldown) {
-                _stateMachine.ChangeState(FSMState.Attack.ToString());
+                _stateMachine.ChangeState((int)NinjaState.Attack);
             }
             return;
         }
@@ -75,10 +67,7 @@ public class EnemyAstarMoveState : EnemyState
 
     private void SetTargetPosition()
     {
-        
-        ActionData data = _enemy.ActionData;
-
-        Vector3 targetPos = data.targetTrm.position;
+        Vector3 targetPos = _actionData.targetTrm.position;
         Vector3 myPos = _enemy.transform.position;
 
         float xDirection = Mathf.Sign(targetPos.x - myPos.x);
@@ -95,7 +84,7 @@ public class EnemyAstarMoveState : EnemyState
 
     private void ResetPath()
     {
-        _path = _agent.GetPathToTarget(_agent.ActionData.targetTrm.position);
+        _path = _agent.GetPathToTarget(_actionData.targetTrm.position);
         _currentIndex = 0;
         if(_path.Count > 0)
             _nextPos = _path[_currentIndex];

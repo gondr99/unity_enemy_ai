@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyMoveState : EnemyState
@@ -17,9 +14,9 @@ public class EnemyMoveState : EnemyState
     public override void Update()
     {
         base.Update();
-        if(_enemy.ActionData.targetTrm == null) {
-            _stateMachine.ChangeState(FSMState.Idle.ToString());
-            return;            
+        if(_actionData.targetTrm == null) {
+            _stateMachine.ChangeState((int)NinjaState.Idle);
+            return;
         }
 
         SetTargetPosition();
@@ -34,7 +31,7 @@ public class EnemyMoveState : EnemyState
         {
             _movementCompo.StopImmediately();
             if(Time.time > _enemy.lastAttackTime + _enemy.attackCooldown) {
-                _stateMachine.ChangeState(FSMState.Attack.ToString());
+                _stateMachine.ChangeState((int)NinjaState.Attack);
             }
             return;
         }
@@ -51,10 +48,7 @@ public class EnemyMoveState : EnemyState
 
     private void SetTargetPosition()
     {
-        
-        ActionData data = _enemy.ActionData;
-
-        Vector3 targetPos = data.targetTrm.position;
+        Vector3 targetPos = _actionData.targetTrm.position;
         Vector3 myPos = _enemy.transform.position;
 
         float xDirection = Mathf.Sign(targetPos.x - myPos.x);
