@@ -13,6 +13,33 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Aim",
+                    "type": "Value",
+                    "id": "832fa00b-d920-4280-90ed-53441980dc6e",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Fire",
+                    "type": "Button",
+                    "id": "2a6ebaa9-b4d4-47e2-bc0b-58cd5561ae72",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Reload",
+                    "type": "Button",
+                    "id": "370fbe1a-fbd8-4b66-a499-eaf0e5b60b25",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -70,6 +97,39 @@
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "26b6d6c8-bb82-4fa3-b691-e7ee4a5a0906",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";KeyboardMouse",
+                    "action": "Aim",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "725a28f3-9854-46ca-a65a-e379287c8d79",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "24f560e8-8182-4daa-8bca-8aa1011e9ecc",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Reload",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
