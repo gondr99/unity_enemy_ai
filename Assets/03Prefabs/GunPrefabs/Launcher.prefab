@@ -132,7 +132,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e69f09ec538d4e95a0959abf0b51bf8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponData: {fileID: 11400000, guid: cf563e63f73c8c940914b94b6af98a93, type: 2}
+  <WeaponData>k__BackingField: {fileID: 11400000, guid: cf563e63f73c8c940914b94b6af98a93, type: 2}
+  createChannel: {fileID: 11400000, guid: bd8485c1acea63d418bf10b8787b8a80, type: 2}
   weaponSprite: {fileID: 8902202575605848137}
   headUpSortingOrder: -1
   <FireTrm>k__BackingField: {fileID: 3360361667181313925}
+  OnFireBullet:
+    m_PersistentCalls:
+      m_Calls: []

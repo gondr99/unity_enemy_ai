@@ -16,6 +16,7 @@ MonoBehaviour:
   gunName: AKGun
   gunSpritePosition: {x: 0.539, y: 0, z: 0}
   prefab: {fileID: 4514347254717759166, guid: 6703b0993e650bc4b8340aaf96202da0, type: 3}
+  bulletSo: {fileID: 11400000, guid: a0e5006639e85544cb3a54a351192a6a, type: 2}
   damage: 15
   maxAmmo: 10
   reloadTime: 1.5

@@ -90,6 +90,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d4b91e1d1e7ea047885459d86bde684, type: 3}
+--- !u!114 &5732060844298935585 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6111193259168429520, guid: 4d4b91e1d1e7ea047885459d86bde684, type: 3}
+  m_PrefabInstance: {fileID: 1964430440251255025}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6f0f400984b4fc3a1154eeae871fe94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &7660663937333870558 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8147902676232689455, guid: 4d4b91e1d1e7ea047885459d86bde684, type: 3}
@@ -107,6 +118,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CreateManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4207484383798284385, guid: 501103056ca57a84e87a5652c067f1d8, type: 3}
+      propertyPath: poolManager
+      value: 
+      objectReference: {fileID: 5732060844298935585}
     - target: {fileID: 9003685987067713931, guid: 501103056ca57a84e87a5652c067f1d8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

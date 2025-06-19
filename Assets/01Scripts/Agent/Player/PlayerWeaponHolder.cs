@@ -13,7 +13,7 @@ public class PlayerWeaponHolder : MonoBehaviour, IAgentComponent
     public UnityEvent<Weapon, Weapon> WeaponChange;
 
     private Dictionary<int, Weapon> _weaponDict;
-    
+    private bool _isShooting = false;
     public void Initialize(Agent agent)
     {
         _player = agent as Player;
@@ -22,7 +22,16 @@ public class PlayerWeaponHolder : MonoBehaviour, IAgentComponent
         ChangeGun(0);
 
         PlayerInput.OnChangeWeapon += ChangeGun;
+        PlayerInput.OnFireKeyChange += HandleFireState;
     }
+
+    private void OnDestroy()
+    {
+        PlayerInput.OnChangeWeapon -= ChangeGun;
+        PlayerInput.OnFireKeyChange -= HandleFireState;
+    }
+
+    private void HandleFireState(bool isShooting) => _isShooting = isShooting;
 
     public void ChangeGun(int idx)
     {
@@ -51,8 +60,17 @@ public class PlayerWeaponHolder : MonoBehaviour, IAgentComponent
     private void Update()
     {
         RotateWeapon(PlayerInput.MousePosition);
+        CheckFire();
     }
-    
+
+    private void CheckFire()
+    {
+        if (_isShooting && CurrentWeapon != null)
+        {
+            CurrentWeapon.TryToShooting();
+        }
+    }
+
     private void RotateWeapon(Vector2 mousePos)
     {
         Vector2 direction = _player.transform.InverseTransformPoint(mousePos);
