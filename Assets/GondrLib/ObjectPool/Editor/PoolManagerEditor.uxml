@@ -1,0 +1,17 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/GondrLib/ObjectPool/Editor/PoolManagerEditor.uss?fileID=7433441132597879392&amp;guid=6d99ff75abbea5540ab9ce6e5724b272&amp;type=3#PoolManagerEditor" />
+    <ui:VisualElement name="Container" style="flex-grow: 1; flex-direction: column;">
+        <ui:VisualElement name="TopBar" class="top_bar">
+            <ui:Label text="Gondr Pool Manager" name="TitleLabel" style="-unity-font-style: bold; font-size: 15px;" />
+            <ui:Button text="Create Item" name="CreateBtn" class="red_btn" />
+        </ui:VisualElement>
+        <GondrLib.ObjectPool.Editor.GGMSplitView name="SplitView" fixed-pane-initial-dimension="280">
+            <ui:VisualElement name="LeftPanel" style="flex-grow: 1;">
+                <ui:ScrollView name="ItemView" class="item_view" />
+            </ui:VisualElement>
+            <ui:VisualElement name="RightPanel" style="flex-grow: 1; flex-basis: 900px;">
+                <ui:VisualElement name="InspectorView" class="inspector_view" />
+            </ui:VisualElement>
+        </GondrLib.ObjectPool.Editor.GGMSplitView>
+    </ui:VisualElement>
+</ui:UXML>

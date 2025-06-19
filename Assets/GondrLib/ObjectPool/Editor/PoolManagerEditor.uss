@@ -1,0 +1,52 @@
+.top_bar {
+    flex-basis: 45px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 15px;
+    margin-left: 15px;
+    border-bottom-color: rgb(137, 137, 137);
+    border-bottom-width: 1px;
+}
+
+.item_view {
+    flex-grow: 1;
+}
+
+.inspector_view {
+    flex-grow: 1;
+}
+
+.red_btn {
+    padding-top: 4px;
+    padding-right: 9px;
+    padding-bottom: 4px;
+    padding-left: 9px;
+    background-color: rgb(185, 46, 46);
+    border-left-color: rgb(132, 32, 32);
+    border-right-color: rgb(132, 32, 32);
+    border-top-color: rgb(132, 32, 32);
+    border-bottom-color: rgb(101, 27, 27);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    transition-property: background-color;
+    transition-duration: 0.3s;
+}
+
+.red_btn:hover {
+    padding-top: 4px;
+    padding-right: 9px;
+    padding-bottom: 4px;
+    padding-left: 9px;
+    background-color: rgb(209, 54, 54);
+    border-left-color: rgb(132, 32, 32);
+    border-right-color: rgb(132, 32, 32);
+    border-top-color: rgb(132, 32, 32);
+    border-bottom-color: rgb(101, 27, 27);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
