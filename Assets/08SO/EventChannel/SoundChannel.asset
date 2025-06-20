@@ -9,9 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: daea1f1b079a412fbf101fd44805c7b2, type: 3}
-  m_Name: PoolManager
+  m_Script: {fileID: 11500000, guid: 42fe2239f38942f38ce585e8f6b3863e, type: 3}
+  m_Name: SoundChannel
   m_EditorClassIdentifier: 
-  itemList:
-  - {fileID: 11400000, guid: a0e5006639e85544cb3a54a351192a6a, type: 2}
-  - {fileID: 11400000, guid: 7993fd0dd36742c42b0eb06e0db47458, type: 2}

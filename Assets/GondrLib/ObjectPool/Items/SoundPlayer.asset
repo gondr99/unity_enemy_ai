@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: daea1f1b079a412fbf101fd44805c7b2, type: 3}
-  m_Name: PoolManager
+  m_Script: {fileID: 11500000, guid: cce3d017ddc3464e88742eaf91ebea0d, type: 3}
+  m_Name: SoundPlayer
   m_EditorClassIdentifier: 
-  itemList:
-  - {fileID: 11400000, guid: a0e5006639e85544cb3a54a351192a6a, type: 2}
-  - {fileID: 11400000, guid: 7993fd0dd36742c42b0eb06e0db47458, type: 2}
+  poolingName: SoundPlayer
+  prefab: {fileID: 6669773009664216292, guid: de936462ef5eff8428e8e7aa22362bc4, type: 3}
+  initCount: 10
