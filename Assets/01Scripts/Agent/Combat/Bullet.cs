@@ -35,6 +35,13 @@ public class Bullet : Projectile
     {
         if (_isDead) return;
         _isDead = true;
+
+        if (other.TryGetComponent(out IDamageable damageable))
+        {
+            Vector2 direction = other.transform.position - transform.position;
+            damageable.ApplyDamage(_damage, direction.normalized);
+        }
+        
         DestroyBullet();
     }
 

@@ -2,11 +2,16 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
-public abstract class Agent : MonoBehaviour
+public abstract class Agent : MonoBehaviour, IDamageable
 {
+    public UnityEvent OnHit;
+    public UnityEvent OnDead;
+    
     private Dictionary<Type, IAgentComponent> _componentDict = new Dictionary<Type, IAgentComponent>();
 
+    public UnityEvent<float, Vector2> OnDamage;
     protected virtual void Awake()
     {
         _componentDict = GetComponentsInChildren<IAgentComponent>()
@@ -40,5 +45,10 @@ public abstract class Agent : MonoBehaviour
         
         Debug.LogError($"Component of type {type} not found on agent {name}");
         return default;
+    }
+
+    public void ApplyDamage(float damage, Vector2 direction)
+    {
+        OnDamage?.Invoke(damage, direction);
     }
 }

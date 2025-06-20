@@ -9,13 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d315a6cdc6d42589faf30171d27a122, type: 3}
-  m_Name: RocketSound
+  m_Script: {fileID: 11500000, guid: cce3d017ddc3464e88742eaf91ebea0d, type: 3}
+  m_Name: RocketExplosion
   m_EditorClassIdentifier: 
-  audioType: 0
-  clip: {fileID: 8300000, guid: adc5f278fc3dc7d439c9a48b15873cf2, type: 3}
-  loop: 0
-  randomizePitch: 1
-  randomPitchModifier: 0.1
-  volume: 0.5
-  pitch: 1
+  poolingName: RocketExplosion
+  prefab: {fileID: 8138767926799223353, guid: 771000e1e8afa4e4bab54c7f573cd5aa, type: 3}
+  initCount: 0

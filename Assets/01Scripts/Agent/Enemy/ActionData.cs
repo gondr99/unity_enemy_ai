@@ -5,6 +5,7 @@ using UnityEngine;
 public class ActionData : MonoBehaviour, IAgentComponent
 {
     public Transform targetTrm;
+    public Vector2 LastHitDirection { get; set; }
 
     private Agent _owner;
     public void Initialize(Agent agent)
