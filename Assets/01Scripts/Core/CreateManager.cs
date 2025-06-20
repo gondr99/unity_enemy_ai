@@ -10,6 +10,19 @@ public class CreateManager : MonoBehaviour
     private void Awake()
     {
         CreateChannel.AddListener<ProjectileCreate>(HandleProjectileCreate);
+        CreateChannel.AddListener<VfxPlay>(HandleVfxPlay);
+    }
+
+    private void OnDestroy()
+    {
+        CreateChannel.RemoveListener<ProjectileCreate>(HandleProjectileCreate);
+        CreateChannel.RemoveListener<VfxPlay>(HandleVfxPlay);
+    }
+
+    private void HandleVfxPlay(VfxPlay evt)
+    {
+        VfxPlayer player = poolManager.Pop<VfxPlayer>(evt.effectSo);
+        player.PlayVfx(evt.position);
     }
 
     private void HandleProjectileCreate(ProjectileCreate evt)

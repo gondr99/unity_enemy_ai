@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Launcher
   m_EditorClassIdentifier: 
   gunSprite: {fileID: -4493391353744132287, guid: a391374b34845c7468fa830f86849aa9, type: 3}
-  gunName: AKGun
+  gunName: RocketLauncher
   gunSpritePosition: {x: 0.539, y: 0, z: 0}
   prefab: {fileID: 4514347254717759166, guid: 6703b0993e650bc4b8340aaf96202da0, type: 3}
-  bulletSo: {fileID: 11400000, guid: a0e5006639e85544cb3a54a351192a6a, type: 2}
+  bulletSo: {fileID: 11400000, guid: e7a652db7fd98a040ad74e49cf0362c5, type: 2}
   damage: 15
   maxAmmo: 10
   reloadTime: 1.5

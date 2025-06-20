@@ -236,6 +236,8 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   rigidbody: {fileID: 5116734591940157764}
+  impactEffect: {fileID: 11400000, guid: 4ed51cc9c71643a4aae4d03fca32c0f4, type: 2}
   <PoolItem>k__BackingField: {fileID: 11400000, guid: a0e5006639e85544cb3a54a351192a6a, type: 2}
+  createChannel: {fileID: 11400000, guid: bd8485c1acea63d418bf10b8787b8a80, type: 2}
   moveSpeed: 30
   lifeTime: 2

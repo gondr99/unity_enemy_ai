@@ -1,9 +1,7 @@
-using System;
 using GondrLib.EventSystem;
 using UnityEngine;
 
-
-public class Bullet : Projectile
+public class Rocket : Projectile
 {
     [SerializeField] private GameEventChannelSo createChannel;
     [SerializeField] private float moveSpeed = 15f;
@@ -18,7 +16,7 @@ public class Bullet : Projectile
         transform.SetPositionAndRotation(firePos.position, firePos.rotation);
         _direction = firePos.right;
     }
-
+    
     private void FixedUpdate()
     {
         rigidbody.linearVelocity = _direction * moveSpeed;
@@ -27,18 +25,18 @@ public class Bullet : Projectile
         if (_lifeTimer >= lifeTime)
         {
             _isDead = true;
-            DestroyBullet();
+            DestroyRocket();
         }
     }
-
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (_isDead) return;
         _isDead = true;
-        DestroyBullet();
+        DestroyRocket();
     }
 
-    private void DestroyBullet()
+    private void DestroyRocket()
     {
         VfxPlay playEvt = CreateEvents.VfxPlay.Initializer(impactEffect, transform.position);
         createChannel.RaiseEvent(playEvt);

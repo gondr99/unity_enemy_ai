@@ -7,6 +7,8 @@ public abstract class Projectile : MonoBehaviour, IPoolable
 {
     [SerializeField] protected ContactFilter2D targetFilter;
     [SerializeField] protected new Rigidbody2D rigidbody;
+    [SerializeField] protected PoolItemSO impactEffect;
+    
     protected bool _isDead;
     protected float _lifeTimer;
     protected Pool _myPool;

@@ -5620,7 +5620,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: M484BulletCollection1_209
+      name: RoketRight
       rect:
         serializedVersion: 2
         x: 219
@@ -7556,7 +7556,6 @@ TextureImporter:
       M484BulletCollection1_206: -2349667978303613679
       M484BulletCollection1_207: -3742542799614614820
       M484BulletCollection1_208: -8667728058913542090
-      M484BulletCollection1_209: 7469206431040708457
       M484BulletCollection1_21: -6063840612864815260
       M484BulletCollection1_210: 582467906979434162
       M484BulletCollection1_211: 6350920014587061643
@@ -7723,6 +7722,7 @@ TextureImporter:
       M484BulletCollection1_97: 7846244997814005075
       M484BulletCollection1_98: -5418409895015542517
       M484BulletCollection1_99: 2623725742887524252
+      RoketRight: 7469206431040708457
       b_yellow_0: 4990897440635085369
       b_yellow_1: -8708205061716093984
       b_yellow_2: 427244795673317225
