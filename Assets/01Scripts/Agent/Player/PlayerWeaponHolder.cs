@@ -50,7 +50,7 @@ public class PlayerWeaponHolder : MonoBehaviour, IAgentComponent
         for (int idx = 0; idx < weaponList.Length; idx++)
         {
             Weapon newWeapon = Instantiate(weaponList[idx].prefab, transform);
-            newWeapon.InitializeWeapon();
+            newWeapon.InitializeWeapon(_player);
             newWeapon.transform.localPosition = weaponList[idx].gunSpritePosition;
             newWeapon.gameObject.SetActive(false);
             _weaponDict.Add(idx, newWeapon);

@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7d315a6cdc6d42589faf30171d27a122, type: 3}
-  m_Name: AKSound
+  m_Name: PlayerHitSound
   m_EditorClassIdentifier: 
   audioType: 0
-  clip: {fileID: 8300000, guid: 2cce060e4d18877479b52f0bcff393dc, type: 3}
+  clip: {fileID: 8300000, guid: ea4e21d3a1a85184ba5b80e88bb03c58, type: 3}
   loop: 0
   randomizePitch: 1
-  randomPitchModifier: 0.05
-  volume: 0.5
+  randomPitchModifier: 0.2
+  volume: 1
   pitch: 1

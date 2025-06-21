@@ -8,10 +8,11 @@ public abstract class Agent : MonoBehaviour, IDamageable
 {
     public UnityEvent OnHit;
     public UnityEvent OnDead;
+    public bool IsDead { get; protected set; }
     
     private Dictionary<Type, IAgentComponent> _componentDict = new Dictionary<Type, IAgentComponent>();
 
-    public UnityEvent<float, Vector2> OnDamage;
+    public UnityEvent<float, Vector2, float, Agent> OnDamage;
     protected virtual void Awake()
     {
         _componentDict = GetComponentsInChildren<IAgentComponent>()
@@ -47,8 +48,8 @@ public abstract class Agent : MonoBehaviour, IDamageable
         return default;
     }
 
-    public void ApplyDamage(float damage, Vector2 direction)
+    public void ApplyDamage(float damage, Vector2 direction, float knockBackForce, Agent owner)
     {
-        OnDamage?.Invoke(damage, direction);
+        OnDamage?.Invoke(damage, direction, knockBackForce, owner);
     }
 }

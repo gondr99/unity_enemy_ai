@@ -9,6 +9,8 @@ public class AgentMovement : MonoBehaviour, IAgentComponent
     private Agent _owner;
     private Vector2 _movementInput;
 
+    public bool CanManualMove { get; set; } = true;
+    
     public void Initialize(Agent owner)
     {
         _owner = owner;
@@ -27,6 +29,12 @@ public class AgentMovement : MonoBehaviour, IAgentComponent
 
     private void FixedUpdate()
     {
-        RigidCompo.linearVelocity = _movementInput * moveSpeed;
+        if(CanManualMove)
+            RigidCompo.linearVelocity = _movementInput * moveSpeed;
+    }
+
+    public void AddForceToAgent(Vector2 force)
+    {
+        RigidCompo.AddForce(force, ForceMode2D.Impulse);
     }
 }

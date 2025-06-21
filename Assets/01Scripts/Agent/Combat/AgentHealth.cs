@@ -15,12 +15,14 @@ public class AgentHealth : MonoBehaviour, IAgentComponent, IDamageable
         currentHealth = maxHealth;
     }
 
-    public void ApplyDamage(float damage, Vector2 direction)
+    public void ApplyDamage(float damage, Vector2 direction, float knockBackForce, Agent owner)
     {
         currentHealth = Mathf.Clamp(currentHealth - damage, 0, maxHealth);
         if (actionData != null)
         {
+            actionData.targetTrm = owner.transform;
             actionData.LastHitDirection = direction;
+            actionData.KnockBackForce = knockBackForce;
         }
         
         _agent.OnHit?.Invoke();

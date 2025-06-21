@@ -1,4 +1,3 @@
-using System;
 using GondrLib.EventSystem;
 using UnityEngine;
 
@@ -12,8 +11,9 @@ public class Bullet : Projectile
     private float _damage;
     private Vector2 _direction;
     
-    public override void InitAndFire(Transform firePos, float damage)
+    public override void InitAndFire(Transform firePos, float damage, Agent owner)
     {
+        _owner = owner;
         _damage = damage;
         transform.SetPositionAndRotation(firePos.position, firePos.rotation);
         _direction = firePos.right;
@@ -38,8 +38,7 @@ public class Bullet : Projectile
 
         if (other.TryGetComponent(out IDamageable damageable))
         {
-            Vector2 direction = other.transform.position - transform.position;
-            damageable.ApplyDamage(_damage, direction.normalized);
+            damageable.ApplyDamage(_damage, transform.right, knockBackForce, _owner);
         }
         
         DestroyBullet();

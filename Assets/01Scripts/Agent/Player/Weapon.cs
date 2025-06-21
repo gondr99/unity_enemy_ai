@@ -19,8 +19,10 @@ public class Weapon : MonoBehaviour
     private float _lastFireTime;
     private int _currentAmmo;
 
-    public void InitializeWeapon()
+    private Agent _gunOwner;
+    public void InitializeWeapon(Agent owner)
     {
+        _gunOwner = owner;
         _defaultSoringOrder = weaponSprite.sortingOrder;
         _currentAmmo = WeaponData.maxAmmo;
     }
@@ -46,7 +48,7 @@ public class Weapon : MonoBehaviour
 
     private void FireSingleShot()
     {
-        var createEvt = CreateEvents.ProjectileCreate.Initializer(FireTrm, WeaponData.damage,WeaponData.bulletSo);
+        var createEvt = CreateEvents.ProjectileCreate.Initializer(FireTrm, WeaponData.damage,WeaponData.bulletSo, _gunOwner);
         createChannel.RaiseEvent(createEvt);
         _lastFireTime = Time.time;
         _currentAmmo--;

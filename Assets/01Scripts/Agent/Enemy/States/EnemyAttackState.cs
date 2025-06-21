@@ -12,7 +12,6 @@ public class EnemyAttackState : EnemyState
     {
         base.Enter();
         _movement.StopImmediately();
-
     }
 
     public override void Update()

@@ -5048,6 +5048,7 @@ MonoBehaviour:
     maxNormalAngle: 0
   rigidbody: {fileID: 5534055227784814702}
   impactEffect: {fileID: 11400000, guid: 32b234de0457fcc4c89c6b775d9df469, type: 2}
+  knockBackForce: 4
   <PoolItem>k__BackingField: {fileID: 11400000, guid: e7a652db7fd98a040ad74e49cf0362c5, type: 2}
   createChannel: {fileID: 11400000, guid: bd8485c1acea63d418bf10b8787b8a80, type: 2}
   soundChannel: {fileID: 11400000, guid: 49eb569cd1776cb4dad40bff66b1dbd2, type: 2}

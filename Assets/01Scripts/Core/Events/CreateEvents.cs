@@ -13,12 +13,14 @@ public class ProjectileCreate : GameEvent
     public Transform fireTrm;
     public float damage;
     public PoolItemSO itemSo;
+    public Agent owner;
 
-    public ProjectileCreate Initializer(Transform trm, float damage, PoolItemSO item)
+    public ProjectileCreate Initializer(Transform trm, float damage, PoolItemSO item, Agent owner)
     {
         fireTrm = trm;
         this.damage = damage;
         itemSo = item;
+        this.owner = owner;
         return this;
     }
 }

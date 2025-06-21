@@ -28,6 +28,6 @@ public class CreateManager : MonoBehaviour
     private void HandleProjectileCreate(ProjectileCreate evt)
     {
         Projectile projectile = poolManager.Pop<Projectile>(evt.itemSo);
-        projectile.InitAndFire(evt.fireTrm, evt.damage);
+        projectile.InitAndFire(evt.fireTrm, evt.damage, evt.owner);
     }
 }

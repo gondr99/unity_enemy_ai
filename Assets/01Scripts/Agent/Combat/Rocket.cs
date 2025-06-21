@@ -23,8 +23,9 @@ public class Rocket : Projectile
         _hitResult = new Collider2D[maxHitCount];
     }
 
-    public override void InitAndFire(Transform firePos, float damage)
+    public override void InitAndFire(Transform firePos, float damage, Agent owner)
     {
+        _owner = owner;
         _damage = damage;
         transform.SetPositionAndRotation(firePos.position, firePos.rotation);
         _direction = firePos.right;
@@ -59,7 +60,7 @@ public class Rocket : Projectile
             if (_hitResult[i].TryGetComponent(out IDamageable damageable))
             {
                 Vector2 direction = _hitResult[i].transform.position - transform.position;
-                damageable.ApplyDamage(_damage, direction.normalized);
+                damageable.ApplyDamage(_damage, direction.normalized, knockBackForce, _owner);
             }
         }
     }
