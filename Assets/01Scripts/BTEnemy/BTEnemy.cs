@@ -1,3 +1,5 @@
+using System;
+using Unity.Behavior;
 using UnityEngine;
 
 public abstract class BTEnemy : Agent
@@ -6,17 +8,18 @@ public abstract class BTEnemy : Agent
     public ContactFilter2D enemyFilter;
     public float detectRadius;
 
-    [Header("Attack Settings")]
-    public float attackCooldown = 0.5f;
-    [HideInInspector] public float lastAttackTime;
-    
+    private BehaviorGraphAgent _btAgent;
     
     protected override void Awake()
     {
         base.Awake();
-
-    
-        
+        _btAgent = GetComponent<BehaviorGraphAgent>();
     }
 
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, detectRadius);
+    }
 }

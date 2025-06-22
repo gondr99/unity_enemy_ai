@@ -15,6 +15,7 @@ public class BlinkFeedback : Feedback
 
     public override void FinishFeedback()
     {
-        targetRenderer.material.SetFloat(_isBlinkHash, 0f);
+        if(targetRenderer != null)
+            targetRenderer.material.SetFloat(_isBlinkHash, 0f);
     }
 }

@@ -17,6 +17,8 @@ public class AgentHealth : MonoBehaviour, IAgentComponent, IDamageable
 
     public void ApplyDamage(float damage, Vector2 direction, float knockBackForce, Agent owner)
     {
+        if (_agent.IsDead) return;
+        
         currentHealth = Mathf.Clamp(currentHealth - damage, 0, maxHealth);
         if (actionData != null)
         {
