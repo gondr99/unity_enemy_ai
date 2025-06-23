@@ -5,6 +5,7 @@ public class EnemyAnimator : AgentAnimator
 
     private Enemy _enemy;
     private EnemyAnimationTrigger _trigger;
+    
     public override void Initialize(Agent owner)
     {
         base.Initialize(owner);

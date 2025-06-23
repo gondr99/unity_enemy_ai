@@ -81,8 +81,8 @@ GameObject:
   - component: {fileID: 1898432434792218635}
   - component: {fileID: 6395095561778324850}
   - component: {fileID: 4525816629658894196}
-  - component: {fileID: 659472328307888277}
   - component: {fileID: 6736231513031068339}
+  - component: {fileID: 4118950946269003626}
   m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
@@ -195,18 +195,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fcdb1f1ca9f06343b7bb66aaf684d8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &659472328307888277
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3688692105529591965}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13eb6e7b27af9ba4bb653d4f5b2cf811, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6736231513031068339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,6 +208,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFacingRight: 1
+--- !u!114 &4118950946269003626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3688692105529591965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ac073dd0a153b240becd084276d3463, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3815572417478765114
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,7 +319,8 @@ GameObject:
   - component: {fileID: 2351479439244735347}
   - component: {fileID: 7796971283888058115}
   - component: {fileID: 3130414512814198961}
-  m_Layer: 0
+  - component: {fileID: 4178206563332860521}
+  m_Layer: 9
   m_Name: EnemyGolem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -447,8 +448,70 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   detectRadius: 6
-  attackCooldown: 0.5
-  lastAttackTime: 0
+--- !u!114 &4178206563332860521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5013245411369256646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0038c16c34866b4f9e25c9c0dc0f7e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Graph: {fileID: -3162057012055272584, guid: cfa3422e14bcb5a41a8a37a6f97d73c6, type: 2}
+  m_BlackboardVariableOverridesList:
+  - rid: 380362253773832291
+  - rid: 380362253773832741
+  - rid: 380362253773832742
+  - rid: 380362253773833013
+  - rid: 380362255325462618
+  m_IsInitialised: 0
+  m_IsStarted: 0
+  references:
+    version: 2
+    RefIds:
+    - rid: 380362253773832291
+      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 1
+          m_Value1: 0
+        Name: Self
+        m_Value: {fileID: 5013245411369256646}
+    - rid: 380362253773832741
+      type: {class: 'BlackboardVariable`1[[AgentMovement, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 14929318640345808468
+          m_Value1: 14666344360765500171
+        Name: Movement
+        m_Value: {fileID: 7228019936085045949}
+    - rid: 380362253773832742
+      type: {class: 'BlackboardVariable`1[[_01Scripts.BTEnemy.WayPoints, Assembly-CSharp]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 383609929895098247
+          m_Value1: 8979103590909455887
+        Name: WayPoints
+        m_Value: {fileID: 0}
+    - rid: 380362253773833013
+      type: {class: 'BlackboardVariable`1[[UnityEngine.Animator, UnityEngine.AnimationModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 10681549812280682104
+          m_Value1: 14209080547959641354
+        Name: Animator
+        m_Value: {fileID: 6395095561778324850}
+    - rid: 380362255325462618
+      type: {class: 'BlackboardVariable`1[[UnityEngine.Transform, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 16580862172950032888
+          m_Value1: 16136163865918130563
+        Name: Target
+        m_Value: {fileID: 0}
 --- !u!1 &6218163843335644767
 GameObject:
   m_ObjectHideFlags: 0
@@ -702,6 +765,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8097356431921059712}
     m_Modifications:
+    - target: {fileID: 6744929302665640191, guid: ce8ba5682785eb945be8f4249b8ddb42, type: 3}
+      propertyPath: <RigidCompo>k__BackingField
+      value: 
+      objectReference: {fileID: 2351479439244735347}
     - target: {fileID: 6972885524164380162, guid: ce8ba5682785eb945be8f4249b8ddb42, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -756,3 +823,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6972885524164380162, guid: ce8ba5682785eb945be8f4249b8ddb42, type: 3}
   m_PrefabInstance: {fileID: 4167475216190556738}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7228019936085045949 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6744929302665640191, guid: ce8ba5682785eb945be8f4249b8ddb42, type: 3}
+  m_PrefabInstance: {fileID: 4167475216190556738}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83769740ef4a04a4f81f9c48fae975ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

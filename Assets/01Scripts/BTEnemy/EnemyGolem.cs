@@ -26,15 +26,7 @@ public class EnemyGolem : BTEnemy
 
     public void DashAttack(Vector3 targetPos)
     {
-        _rendererCompo.SetSortingToTop(true);
-        Sequence seq = DOTween.Sequence();
-        seq.Append(transform.DOShakePosition(0.3f, 0.3f, 20));
-        seq.Append(transform.DOMove(targetPos, 0.8f).SetEase(Ease.InCubic));
-        seq.OnComplete(() =>
-        {
-            
-            _rendererCompo.SetSortingToTop(false);
-        });
+        
     }
 
     public void MeleeAttack()

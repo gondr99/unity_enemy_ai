@@ -42,7 +42,8 @@ public partial class WanderingAction : Action
         Vector3 prevDirection = (_nextPoint - _prevPosition).normalized;
         Vector3 nowDirection = (_nextPoint - position).normalized;
 
-        return Vector3.Dot(prevDirection, nowDirection) < 0;
+        _prevPosition = position;
+        return Vector2.Dot(prevDirection, nowDirection) < 0;
     }
 
     private void GoToDestination()

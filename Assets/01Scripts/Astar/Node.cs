@@ -6,7 +6,7 @@ namespace Gondr.Astar
     public class Node : IComparable<Node>
     {
         public Vector3Int pos;
-        public Node _parent;
+        public Node parent;
         public float G;
         public float F;
 
