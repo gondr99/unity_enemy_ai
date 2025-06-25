@@ -87,6 +87,26 @@ namespace Gondr.Astar
             //T타입의 기본값을 리턴하고 그렇지 않다면 0번째를 리턴하고
             return _heap.Count == 0 ? default(T) : _heap[0];
         }
+
+        public void ReCalculateFrom(T node)
+        {
+            int now = _heap.IndexOf(node);
+            if (now < 0) return;
+            
+            while (now > 0)
+            {
+                //자기보다 우선순위가 밀리는 것이 있는지 찾는다.
+                int next = (now - 1) / 2;
+                if (_heap[now].CompareTo(_heap[next]) < 0)
+                {
+                    break;
+                }
+                
+                (_heap[now], _heap[next]) = (_heap[next], _heap[now]);
+
+                now = next;
+            }
+        }
     }
 }
 

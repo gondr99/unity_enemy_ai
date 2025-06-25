@@ -29,6 +29,16 @@ public abstract class Agent : MonoBehaviour, IDamageable
         }
     }
 
+    public IAgentComponent GetCompo(Type type) 
+    {
+        if (_componentDict.TryGetValue(type, out IAgentComponent component))
+        {
+            return component;
+        }
+
+        return default;
+    }
+    
     public T GetCompo<T>(bool isDerived = false) where T : IAgentComponent
     {
         Type type = typeof(T);

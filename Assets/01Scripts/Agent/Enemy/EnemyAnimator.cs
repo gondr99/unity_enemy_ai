@@ -18,4 +18,6 @@ public class EnemyAnimator : AgentAnimator
     {
         _enemy.stateMachine.CurrentState.AnimationEndTrigger();
     }
+    
+    
 }

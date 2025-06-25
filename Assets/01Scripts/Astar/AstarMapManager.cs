@@ -35,6 +35,12 @@ namespace Gondr.Astar
             return _collisionTile.GetTile(pos) == null;
         }
 
+        public bool CheckValidPosition(Vector3 worldPosition)
+        {
+            Vector3Int cellPosition = _floorTile.WorldToCell(worldPosition);
+            return CanMove(cellPosition);
+        }
+
     }
 }
 

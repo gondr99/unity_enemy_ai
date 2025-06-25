@@ -1,18 +1,20 @@
 using System;
+using GondrLib.EventSystem;
 using Unity.Behavior;
 using UnityEngine;
 
 public abstract class BTEnemy : Agent
 {
-    [Header("Detect Setting Values")]
-    public ContactFilter2D enemyFilter;
+    [field: SerializeField] public GameEventChannelSo CreateChannel;
+    [field: SerializeField] public GameEventChannelSo SoundChannel;
     public float detectRadius;
 
     private BehaviorGraphAgent _btAgent;
+    public BehaviorGraphAgent BTAgent => _btAgent;
     
-    protected override void Awake()
+    protected override void InitializeComponents()
     {
-        base.Awake();
+        base.InitializeComponents();
         _btAgent = GetComponent<BehaviorGraphAgent>();
     }
 
