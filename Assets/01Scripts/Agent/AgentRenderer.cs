@@ -12,6 +12,8 @@ public class AgentRenderer : MonoBehaviour, IAgentComponent
 
     protected AgentMovement _movementCompo;
 
+    [SerializeField] protected bool updateDirectionByMove = true;
+
     public virtual void Initialize(Agent owner)
     {
         _owner = owner;
@@ -23,13 +25,14 @@ public class AgentRenderer : MonoBehaviour, IAgentComponent
 
     protected virtual void Update()
     {
-        UpdateVisual();
+        if(updateDirectionByMove)
+            UpdateVisual(_movementCompo.Velocity.x);
     }
 
-    protected virtual void UpdateVisual()
+    public virtual void UpdateVisual(float xValue)
     {
-        bool isTurnLeft = isFacingRight && _movementCompo.Velocity.x < 0;
-        bool isTurnRight = !isFacingRight && _movementCompo.Velocity.x > 0;
+        bool isTurnLeft = isFacingRight && xValue < 0;
+        bool isTurnRight = !isFacingRight && xValue > 0;
         if(isTurnLeft || isTurnRight ) 
             Flip();
     }

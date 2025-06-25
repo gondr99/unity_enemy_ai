@@ -7,7 +7,7 @@ using Unity.Properties;
 using UnityEngine.Serialization;
 
 [Serializable, GeneratePropertyBag]
-[NodeDescription(name: "Wandering", story: "[Self] wandering [waypoints]", category: "Cetificate/Action", id: "ee2a0d727ae1a8b9f7ad4e28d09f277e")]
+[NodeDescription(name: "Wandering", story: "[Self] wandering [waypoints]", category: "Certificate/Action", id: "ee2a0d727ae1a8b9f7ad4e28d09f277e")]
 public partial class WanderingAction : Action
 {
     [SerializeReference] public BlackboardVariable<BTEnemy> Self;

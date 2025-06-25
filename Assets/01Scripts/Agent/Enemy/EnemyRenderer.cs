@@ -11,12 +11,12 @@ public class EnemyRenderer : AgentRenderer
         _actionData = owner.GetCompo<ActionData>();
     }
 
-    protected override void UpdateVisual()
+    public override void UpdateVisual(float xValue)
     {
         Transform target = _actionData.targetTrm;
         if (target == null)
         {
-            base.UpdateVisual();
+            base.UpdateVisual(xValue);
         }
         else
         {

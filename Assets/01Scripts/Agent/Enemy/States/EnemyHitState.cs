@@ -3,14 +3,12 @@ using UnityEngine;
 public class EnemyHitState: EnemyState
 {
     private AgentMovement _movement;
-    private ActionData _actionData;
 
     private const float MAX_KNOCKBACK_FORCE = 7f;
     private float _knockBackEndTime;
     public EnemyHitState(Enemy enemy, EnemyStateMachine stateMachine, string stateName) : base(enemy, stateMachine, stateName)
     {
         _movement = enemy.GetCompo<AgentMovement>();
-        _actionData = enemy.GetCompo<ActionData>();
     }
 
     public override void Enter()
