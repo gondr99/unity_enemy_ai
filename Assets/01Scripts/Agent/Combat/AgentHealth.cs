@@ -26,7 +26,7 @@ public class AgentHealth : MonoBehaviour, IAgentComponent, IDamageable
             actionData.LastHitDirection = direction;
             actionData.KnockBackForce = knockBackForce;
         }
-        
+        Debug.Log("Hit");
         _agent.OnHit?.Invoke();
 
         OnHealthChange?.Invoke(currentHealth, maxHealth);

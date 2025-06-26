@@ -1,7 +1,7 @@
-using System;
 using GondrLib.EventSystem;
 using GondrLib.SoundSystem;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Rocket : Projectile
 {
@@ -54,13 +54,13 @@ public class Rocket : Projectile
     private void CheckDamageTarget()
     {
         int cnt =Physics2D.OverlapCircle(transform.position, explosionRadius, targetFilter, _hitResult);
-        
+        Debug.Log(cnt);
         for (int i = 0; i < cnt; i++)
         {
             if (_hitResult[i].TryGetComponent(out IDamageable damageable))
             {
-                Vector2 direction = _hitResult[i].transform.position - transform.position;
-                damageable.ApplyDamage(_damage, direction.normalized, knockBackForce, _owner);
+                Vector2 direction = Quaternion.Euler(0, 0, Random.Range(-30f, 30f)) * transform.right;
+                damageable.ApplyDamage(_damage, direction, knockBackForce, _owner);
             }
         }
     }
