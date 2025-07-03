@@ -11,6 +11,8 @@ public class PlayerWeaponHolder : MonoBehaviour, IAgentComponent
 
     [SerializeField] private WeaponDataSO[] weaponList;
     public UnityEvent<Weapon, Weapon> WeaponChange;
+    public UnityEvent<float> OnReloadValueChange;
+    public UnityEvent<bool> OnReloadStatusChange;
 
     private Dictionary<int, Weapon> _weaponDict;
     private bool _isShooting = false;
@@ -23,12 +25,20 @@ public class PlayerWeaponHolder : MonoBehaviour, IAgentComponent
 
         PlayerInput.OnChangeWeapon += ChangeGun;
         PlayerInput.OnFireKeyChange += HandleFireState;
+        PlayerInput.OnReloadKeyPress += HandleReloadKeyPress;
     }
 
     private void OnDestroy()
     {
         PlayerInput.OnChangeWeapon -= ChangeGun;
         PlayerInput.OnFireKeyChange -= HandleFireState;
+        PlayerInput.OnReloadKeyPress -= HandleReloadKeyPress;
+    }
+
+    private void HandleReloadKeyPress()
+    {
+        if (CurrentWeapon == null || _isShooting || CurrentWeapon.IsReloading) return;
+        CurrentWeapon.TryReload();
     }
 
     private void HandleFireState(bool isShooting) => _isShooting = isShooting;
@@ -40,9 +50,18 @@ public class PlayerWeaponHolder : MonoBehaviour, IAgentComponent
         //여기서 기존 구독 처리 다 해줘야 해.
         Weapon prevWeapon = CurrentWeapon;
         prevWeapon?.gameObject.SetActive(false);
+
+        if (prevWeapon != null)
+        {
+            prevWeapon.OnReloadStatusChange -= OnReloadStatusChange.Invoke;
+            prevWeapon.OnReloadValueChange -= OnReloadValueChange.Invoke;
+        }
+        
         CurrentWeapon = _weaponDict[idx];
         CurrentWeapon.gameObject.SetActive(true);
         WeaponChange?.Invoke(prevWeapon, CurrentWeapon);
+        CurrentWeapon.OnReloadStatusChange += OnReloadStatusChange.Invoke;
+        CurrentWeapon.OnReloadValueChange += OnReloadValueChange.Invoke;
     }
 
     private void MakeWeapons()
@@ -65,9 +84,11 @@ public class PlayerWeaponHolder : MonoBehaviour, IAgentComponent
 
     private void CheckFire()
     {
-        if (_isShooting && CurrentWeapon != null)
+        if (_isShooting && CurrentWeapon != null && !CurrentWeapon.IsReloading)
         {
             CurrentWeapon.TryToShooting();
+            if (CurrentWeapon.Ammo <= 0)
+                _isShooting = false;
         }
     }
 

@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using GondrLib.EventSystem;
 using UnityEngine;
 using UnityEngine.Events;
@@ -13,8 +14,12 @@ public class Weapon : MonoBehaviour
     [field: SerializeField] public Transform FireTrm { get; private set; }
 
     public UnityEvent OnFireBullet;
+    public Action<float> OnReloadValueChange;
+    public Action<bool> OnReloadStatusChange;
 
     public int Ammo => _currentAmmo;
+    public bool IsReloading { get; private set; } = false;
+    
     private int _defaultSoringOrder;
     private float _lastFireTime;
     private int _currentAmmo;
@@ -53,5 +58,30 @@ public class Weapon : MonoBehaviour
         _lastFireTime = Time.time;
         _currentAmmo--;
         OnFireBullet?.Invoke();
+    }
+
+    public void TryReload()
+    {
+        if(Ammo >= WeaponData.maxAmmo || IsReloading) return;
+        ReloadRoutine();
+        
+    }
+
+    private async void ReloadRoutine()
+    {
+        IsReloading = true;
+        OnReloadStatusChange?.Invoke(IsReloading);
+        float currentTime = 0f;
+        float percent = 0;
+        while (percent < 1f)
+        {
+            currentTime += Time.deltaTime;
+            percent = currentTime / WeaponData.reloadTime;
+            OnReloadValueChange?.Invoke(percent);
+            await Awaitable.NextFrameAsync();
+        }
+        _currentAmmo = WeaponData.maxAmmo;
+        IsReloading = false;
+        OnReloadStatusChange?.Invoke(IsReloading);
     }
 }

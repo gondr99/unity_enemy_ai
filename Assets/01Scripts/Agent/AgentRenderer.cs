@@ -1,7 +1,9 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class AgentRenderer : MonoBehaviour, IAgentComponent
 {
+    public UnityEvent<bool> OnFlipEvent;
     public bool isFacingRight = true;
     protected Agent _owner;
     protected SpriteRenderer _spriteRenderer;
@@ -49,6 +51,7 @@ public class AgentRenderer : MonoBehaviour, IAgentComponent
         float yAngle = isFacingRight ? 0 : 180f;
         
         _owner.transform.localEulerAngles = new Vector3(0, yAngle, 0);
+        OnFlipEvent?.Invoke(isFacingRight);
     }
     #endregion
 }
