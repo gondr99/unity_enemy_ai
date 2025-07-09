@@ -86,7 +86,8 @@ namespace Gondr.Astar
 
             if (CheckArrive() == false)
             {
-                Vector2 direction = _cornerPoints[_currentPathIndex] - _owner.transform.position;
+                Vector2 direction = _cornerPoints[_currentPathIndex] 
+                                    - _owner.transform.position;
                 _movement.SetMovement(direction.normalized);
             }
             else
@@ -103,12 +104,13 @@ namespace Gondr.Astar
             Vector2 currentDirection = (destination - currentPosition).normalized;
             _beforePosition = currentPosition;
 
-            if (Vector2.Dot(beforeDirection, currentDirection) <= 0 || Vector2.Distance(destination, currentDirection) < 0.01f)
+            if (Vector2.Dot(beforeDirection, currentDirection) <= 0 
+                || Vector2.Distance(destination, currentPosition) < 0.01f)
             {
                 _currentPathIndex++;
                 if (_currentPathIndex >= _cornerPoints.Count)
                     IsArrived = true;
-                return true;
+                return IsArrived;
             }
 
             return false;

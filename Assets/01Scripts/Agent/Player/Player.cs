@@ -9,7 +9,7 @@ public class Player : Agent
     public UnityEvent<float> OnAimDirection;
     private void Update()
     {
-        UpdateMoveInput();
+        UpdateMoveInput();  //아무것도 안바꿈.
         UpdateAimDirection();
     }
 
