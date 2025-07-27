@@ -103,14 +103,13 @@ namespace Gondr.Astar
             Vector2 currentDirection = (destination - currentPosition).normalized;
             _beforePosition = currentPosition;
 
-            if (Vector2.Dot(beforeDirection, currentDirection) <= 0 || Vector2.Distance(destination, currentPosition) < 0.01f)
+            if (Vector2.Dot(beforeDirection, currentDirection) <= 0 
+                || Vector2.Distance(destination, currentPosition) < 0.01f)
             {
                 _currentPathIndex++;
                 if (_currentPathIndex >= _cornerPoints.Count)
-                {
                     IsArrived = true;
-                    return true;
-                }
+                return IsArrived;
             }
 
             return false;
