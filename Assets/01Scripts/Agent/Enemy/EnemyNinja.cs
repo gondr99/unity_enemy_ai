@@ -15,8 +15,14 @@ public class EnemyNinja : Enemy
         stateMachine.AddState((int)NinjaState.Idle , new EnemyIdleState(this, stateMachine, "Idle"));
         stateMachine.AddState((int)NinjaState.Move, new EnemyMoveState(this, stateMachine, "Move"));
         stateMachine.AddState((int)NinjaState.Attack, new EnemyAttackState(this, stateMachine, "Attack"));
-        stateMachine.AddState((int)NinjaState.Hit, new EnemyHitState(this, stateMachine, "Hit"));
-        stateMachine.AddState((int)NinjaState.Dead, new EnemyDeadState(this, stateMachine, "Dead"));
+
+        #region Subject Section
+
+        //나중에 과제진행하면서 주석 해제해주세요.
+        // stateMachine.AddState((int)NinjaState.Hit, new EnemyHitState(this, stateMachine, "Hit"));
+        // stateMachine.AddState((int)NinjaState.Dead, new EnemyDeadState(this, stateMachine, "Dead"));
+
+        #endregion
     }
 
     private void Start()

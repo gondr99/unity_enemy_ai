@@ -74,9 +74,6 @@ namespace Gondr.Astar
             
             _currentPathIndex = 1;
 
-            
-            //코너포인트 정리하고, 목적지 향해서 이동하기 시작하고, 이동완료하면 IsArrived true로 체크해주고.
-            //IsStop 고려해서 이동.
         }
 
         private void Update()
@@ -158,30 +155,7 @@ namespace Gondr.Astar
             
             #region Subject
             //이곳에 PathFinding 코드가 들어가야 합니다.
-            while (_openList.Count > 0)
-            {
-                Node n = _openList.Pop();
-                FindOpenList(n);
-                _closeList.Add(n);
-                if (n.pos == _destination)
-                {
-                    result = true;
-                    break;
-                }
-            }
-
-            if (result)
-            {
-                _routePath.Clear();
-                Node last = _closeList[^1];
-                while (last.parent != null)
-                {
-                    _routePath.Add(Map.GetTileCenterWorld(last.pos));
-                    last = last.parent;
-                }
-                _routePath.Add(Map.GetTileCenterWorld(last.pos));
-                _routePath.Reverse();
-            }
+            
             #endregion
 
             return result;
@@ -190,15 +164,11 @@ namespace Gondr.Astar
         
         private bool CheckCorner(Vector3Int nextPoint, Vector3Int currentPoint)
         {
-            #region Subject
-
             if (_cornerCheck == false) return true;
-
-            //if (nextPoint.x == currentPoint.x || nextPoint.y == currentPoint.y) return true; //직선이동은 통과
+            #region Subject
             
             //x축과, Y축에 장애물이 있는지 검사해서 있다면 false
-            return Map.CanMove(new Vector3Int(nextPoint.x, currentPoint.y)) &&
-                   Map.CanMove(new Vector3Int(currentPoint.x, nextPoint.y));
+            return true; 
 
             #endregion
         }
@@ -207,37 +177,6 @@ namespace Gondr.Astar
             #region Subject
 
             //이곳에 오픈리스트를 찾는 코드가 들어가야 합니다.
-            for (int x = -1; x <= 1; x++)
-            {
-                for (int y = -1; y <= 1; y++)
-                {
-                    if (x ==0 && y == 0) continue; //자기 자신은 검사하지 않는다.
-
-                    Vector3Int nextPosition = new Vector3Int(x, y) + currentNode.pos;
-                    if(Map.CanMove(nextPosition) == false) continue;
-                    if (CheckCorner(nextPosition, currentNode.pos) == false )
-                        continue;
-                    
-                    bool isVisited = _closeList.Any(node => node.pos == nextPosition);
-                    if(isVisited) continue; //이미 방문한 노드는 방문하지 않는다.
-
-                    float newG = currentNode.G + Vector3Int.Distance(currentNode.pos, nextPosition);
-
-                    Node nextNode = new Node
-                    {
-                        pos = nextPosition,
-                        parent = currentNode,
-                        G = newG, F = newG + CalcH(nextPosition)
-                    };
-
-                    Node existNode = _openList.Contains(nextNode); //포함하고 있는지 검사
-
-                    if (existNode == null)
-                    {
-                        _openList.Push(nextNode);
-                    }
-                }
-            }
 
             #endregion
            

@@ -31,6 +31,8 @@ namespace Gondr.Astar
                 {
                     break;
                 }
+                
+                //요기를 튜플을 사용하면 좀 더 쉽게 가능
                 T temp = _heap[now];
                 _heap[now] = _heap[next];
                 _heap[next] = temp;
